@@ -1,0 +1,547 @@
+{
+	"info": {
+		"_postman_id": "1e7789f1-e7d9-41f3-b991-e04eadea70c2",
+		"name": "paradocs-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Resorts",
+			"description": "",
+			"item": [
+				{
+					"name": "All resorts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:6039/resorts",
+							"host": [
+								"localhost"
+							],
+							"port": "6039",
+							"path": [
+								"resorts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create resort",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": 1,\n\t\"name\": \"Le relais\",\n\t\"description\": \"Le relais description.\"\n}"
+						},
+						"url": {
+							"raw": "localhost:6039/createresort",
+							"host": [
+								"localhost"
+							],
+							"port": "6039",
+							"path": [
+								"createresort"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update resort",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": 123,\n\t\"name\": \"Bromont\",\n\t\"description\": \"Une montagne d'expérience.\"\n}"
+						},
+						"url": {
+							"raw": "localhost:6039/updateresort",
+							"host": [
+								"localhost"
+							],
+							"port": "6039",
+							"path": [
+								"updateresort"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete resort",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "localhost:6039/deleteresort/1",
+							"host": [
+								"localhost"
+							],
+							"port": "6039",
+							"path": [
+								"deleteresort",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Lodges",
+			"description": "",
+			"item": [
+				{
+					"name": "Get all lodges",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:6039/lodges",
+							"host": [
+								"localhost"
+							],
+							"port": "6039",
+							"path": [
+								"lodges"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create lodge",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": 1,\n\t\"idResort\": 1,\n\t\"name\": \"Lodge1\",\n\t\"description\": \"A beautiful lodge for a small family.\"\n}"
+						},
+						"url": {
+							"raw": "localhost:6039/createlodge",
+							"host": [
+								"localhost"
+							],
+							"port": "6039",
+							"path": [
+								"createlodge"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update lodge",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": 1,\n\t\"idResort\": 1,\n\t\"name\": \"Lodge123\",\n\t\"description\": \"A beautiful lodge for a big family.\"\n}"
+						},
+						"url": {
+							"raw": "localhost:6039/updatelodge",
+							"host": [
+								"localhost"
+							],
+							"port": "6039",
+							"path": [
+								"updatelodge"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete lodge",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/plain"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "localhost:6039/deletelodge/1",
+							"host": [
+								"localhost"
+							],
+							"port": "6039",
+							"path": [
+								"deletelodge",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Lifts",
+			"description": "",
+			"item": [
+				{
+					"name": "Get lifts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:6039/lifts?idResort=1",
+							"host": [
+								"localhost"
+							],
+							"port": "6039",
+							"path": [
+								"lifts"
+							],
+							"query": [
+								{
+									"key": "idResort",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create lift",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idLift\": 2,\n\t\"idResort\": 2,\n\t\"name\": \"Lift2\",\n\t\"description\": \"Lift2 description.\"\n}"
+						},
+						"url": {
+							"raw": "localhost:6039/createlift",
+							"host": [
+								"localhost"
+							],
+							"port": "6039",
+							"path": [
+								"createlift"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete lift",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "localhost:6039/deletelift/1",
+							"host": [
+								"localhost"
+							],
+							"port": "6039",
+							"path": [
+								"deletelift",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update lift",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idLift\": 2,\n\t\"idResort\": 2,\n\t\"name\": \"Lift2\",\n\t\"description\": \"Lift2 description.\"\n}"
+						},
+						"url": {
+							"raw": "localhost:6039/updatelift/1",
+							"host": [
+								"localhost"
+							],
+							"port": "6039",
+							"path": [
+								"updatelift",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "LiftAccessTrails",
+			"description": "",
+			"item": [
+				{
+					"name": "Get LiftAccessTrails",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:6039/liftaccesstrails",
+							"host": [
+								"localhost"
+							],
+							"port": "6039",
+							"path": [
+								"liftaccesstrails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create LiftAccessTrail",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idLift\": 1,\n\t\"idTrail\": 1,\n\t\"name\": \"LAT1\",\n\t\"description\": \"LAT1 description\"\n}"
+						},
+						"url": {
+							"raw": "localhost:6039/createliftaccesstrail",
+							"host": [
+								"localhost"
+							],
+							"port": "6039",
+							"path": [
+								"createliftaccesstrail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete LiftAccessTrail",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "localhost:6039/deleteliftaccesstrail?idLift=1&idTrail=1",
+							"host": [
+								"localhost"
+							],
+							"port": "6039",
+							"path": [
+								"deleteliftaccesstrail"
+							],
+							"query": [
+								{
+									"key": "idLift",
+									"value": "1"
+								},
+								{
+									"key": "idTrail",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update LiftAccessTrail",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idLift\": 1,\n\t\"idTrail\": 1,\n\t\"name\": \"LAT1\",\n\t\"description\": \"LAT1 description\"\n}"
+						},
+						"url": {
+							"raw": "localhost:6039/updateliftaccesstrail/1",
+							"host": [
+								"localhost"
+							],
+							"port": "6039",
+							"path": [
+								"updateliftaccesstrail",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Trails",
+			"description": "",
+			"item": [
+				{
+					"name": "Get all trails",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:6039/trails",
+							"host": [
+								"localhost"
+							],
+							"port": "6039",
+							"path": [
+								"trails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create trail",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idTrail\": 1,\n\t\"name\": \"Trail1\",\n\t\"description\": \"Trail1 description.\"\n}"
+						},
+						"url": {
+							"raw": "localhost:6039/createtrail",
+							"host": [
+								"localhost"
+							],
+							"port": "6039",
+							"path": [
+								"createtrail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete trail",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "localhost:6039/deletetrail/1",
+							"host": [
+								"localhost"
+							],
+							"port": "6039",
+							"path": [
+								"deletetrail",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update trail",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idTrail\": 1,\n\t\"name\": \"Trail1\",\n\t\"description\": \"Trail1 description.\"\n}"
+						},
+						"url": {
+							"raw": "localhost:6039/updatetrail/1",
+							"host": [
+								"localhost"
+							],
+							"port": "6039",
+							"path": [
+								"updatetrail",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

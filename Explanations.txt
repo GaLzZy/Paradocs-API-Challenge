@@ -1,0 +1,30 @@
+[DISCLAIMER]
+I have never used Spring Boot in my entire life. All I did in this project was roaming on the docs and learning on the spot how to use this framework.
+It was also one of the few times I used Mongo.
+
+[USED FRAMEWORK AND LANGUAGE]
+I used Spring Boot with MongoDB and I wrote everything in Java.
+
+[POSTMAN ROUTES]
+All the routes are in the postman json file which you can import in Postman to test them
+
+[HOW TO RUN IT]
+So since I have never used Sprint before, I didn't know how to run it from IntelliJ, which I used to code this project. So I downloaded a tool called
+Spring Tool Suite 4 which made it actually pretty easy to refresh the code I just wrote and start the program.
+
+You'll need MongoDB installed on your machine and start Mongo server from the installation folder.
+
+So from Spring Tool Suite 4, you would just import the project in there and then at the bottom where it says "local", you would expand this and
+click on "paradocs-mongo-api..." and hit the red square and green play button. That's how I ran it.
+
+[DIFFICULTIES]
+So the main difficulty was that I never worked with Spring before. I spent some time in the documentations to learn how it works.
+Probably that the way I made it has a couple problems or doesn't really follow the standards, but I gave it my best anyways from what I saw on the web.
+
+
+So thank you Samuel and Tristan for your time and I hope this is not an absolute disaster...
+
+Have a good day,
+I hope we'll talk soon.
+
+Gabriel.
